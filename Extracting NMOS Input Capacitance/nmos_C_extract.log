@@ -1,0 +1,27 @@
+Circuit: * C:\Users\emman\OneDrive\Desktop\Digital Design\Extracting NMOS Input Capacitance\nmos_C_extract.asc
+
+.OP point found by inspection.
+
+t1: time=1.5e-011 at 1.5e-011
+t2: time=2.51743e-011 at 2.51743e-011
+prop_delay: t2-t1=1.01743e-011
+input_c: prop_delay/(0.7*5k)=2.90693e-015
+
+
+Date: Wed Feb 16 16:52:11 2022
+Total elapsed time: 0.051 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 250
+traniter = 250
+tranpoints = 126
+accept = 124
+rejected = 2
+matrix size = 7
+fillins = 0
+solver = Normal
+Matrix Compiler1:      19 opcodes  0.1/[0.1]/0.1
+Matrix Compiler2: 501 bytes object code size  0.1/0.1/[0.0]
+

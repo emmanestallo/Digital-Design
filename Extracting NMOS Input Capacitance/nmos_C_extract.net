@@ -1,0 +1,15 @@
+* C:\Users\emman\OneDrive\Desktop\Digital Design\Extracting NMOS Input Capacitance\nmos_C_extract.asc
+M1 0 out 0 0 N_50n l=100n w=1000n
+V1 in 0 PULSE(0 1 10p 10p 10p 5m)
+R1 out in 5k
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\emman\OneDrive\Documents\LTspiceXVII\lib\cmp\standard.mos
+.tran 0 100p 0 1p
+.inc transistor_models.txt
+.meas TRAN t1 FIND time WHEN V(in)=0.5 CROSS=1
+.meas TRAN t2 FIND time WHEN V(out)=0.5 CROSS=1
+.meas TRAN prop_delay PARAM t2-t1
+.meas TRAN input_c PARAM prop_delay/(0.7*5k)
+.backanno
+.end
